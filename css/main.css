@@ -1,0 +1,58 @@
+.space{
+	float: right;
+}
+.marge{
+	margin-right: 800px; 
+}
+.margindex{
+	margin: 15px; 
+}
+.design{
+	background-color: #75A8E7;
+	border-color: #75A8E7;
+	color: white;
+}
+.bord{
+	border-radius: 10px;
+}
+.position{
+	display: flex;
+	justify-content: center; 
+	align-items: center;
+}
+.position1{
+	display: flex;
+	justify-content: center; 
+	flex-direction: column;
+}
+.text{
+	text-align: center;
+}
+.hit{
+	background-color: #75A8E7;
+}
+.decore{
+	color: white;
+}
+.banner{
+	 height: 300px;
+	background-image: url('../img/back.jfif');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+a:hover{
+	background-color: transparent;
+}
+.bordd{
+	border: solid;
+	border-radius: 10px;
+}
+.this{
+	text-align: center;
+}
+.then{
+	margin-top: 10px;
+}
