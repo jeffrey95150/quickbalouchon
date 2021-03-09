@@ -12,7 +12,7 @@
           <label for="exampleFormControlInput1" class="form-label">Password</label>
           <input type="password" class="form-control" name="password"><br>
         </div>
-        <button type="submit" class="design bord col-6" style="display: flex;" name="sendFormRegister">Log'n</button>
+        <button type="submit" class="design bord col-6" style="display: flex;" name="sendFormRegister">Se connecter</button>
      </div>
      
     </form>
