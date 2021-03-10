@@ -31,7 +31,7 @@
 				      	if ($_SESSION) { ?>
 
 				      		<li class="nav-item">
-					          <a class="nav-link decore" href="#">Mon Compte</a>
+					          <a class="nav-link decore" href="../pages/accueil.php">Mon Compte</a>
 					        </li>
 
 					        <li class="nav-item">

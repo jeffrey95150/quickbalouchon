@@ -41,6 +41,8 @@ $results = $req->fetchAll(PDO::FETCH_ASSOC);
                         <p style="text-align: center"><?php echo $value['numéro']. ' '.  $value['rue'] . ', ' .  $value['ville'] . ' ' .$value['pays']  ?> </p>
 
                         <p>
+                        	<?php echo '<a style="margin-left: 75px;" href="../pagesClient/updateColi.php?id=' . $value['id'] . '" class="btn btn-primary">Modifier</a>'?>
+                        	<?php echo '<a style="margin-left: 75px;" href="../pagesClient/liste.php?id=' . $value['id'] . '" class="btn btn-link">Listes</a>'?>
                         	<?php echo '<a style="margin-left: 75px;" href="../pagesClient/DeleteColi.php?id=' . $value['id'] . '" class="btn btn-danger">Supprimer</a>'?>
                         </p>
                         
