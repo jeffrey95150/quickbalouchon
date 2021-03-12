@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
 	<title>Page de lien</title>
@@ -14,7 +13,7 @@
 	<div>
 		
 		<header >
-			
+
 			<nav class="navbar navbar-expand-lg navbar-light bg-light" >
 			  <div class="container-fluid hit">
 			    <div class="collapse navbar-collapse marge" id="navbarNav">
@@ -28,7 +27,7 @@
 			        </li>
 			        <li class="nav-item">
 			          <a class="nav-link decore" href="inscription.php" data-toggle="modal" data-target="#registerClient">S'inscrire</a>
-			        </li> 
+			        </li>
 			        <!-- <li class="nav-item">
 			          <a class="nav-link decore" href="link1.php">Se Connecter</a>
 			        </li> -->
@@ -55,7 +54,7 @@
 		<div class="col-9 form-row position margindex">
 			<div class="col-6 over bord">
 				<a href="connexion.php">Je suis un client</a>
-			</div>	
+			</div>
 			<div class="col-6 over bord">
 				<a href="connexionlivreur.php">Je suis une entreprise </a>
 			</div>

@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php
+session_start();
+?>
+
 <html>
 <head>
 	<title>Quickbaluchon</title>
@@ -21,7 +24,7 @@
 
 <h2>Modifier votre colis</h2>
 
-<?php 
+<?php
 	$host = 'localhost';
 	$port = '3306';
 	$dbname = 'quickbaluchon';
@@ -72,10 +75,10 @@
 
 				<div class="form-group">
 					<label for="number">colis</label>
-					<input class="image" type="file" name="colis" placeholder="<?=$results['colis']; ?>" accept="image/png, image/jpeg, image/jpg"> 
+					<input class="image" type="file" name="colis" placeholder="<?=$results['colis']; ?>" accept="image/png, image/jpeg, image/jpg">
 
 				 </div>
-                    
+
 
 				<button type="submit" name="modifier">Ajouter</button>
                 </form>

@@ -1,23 +1,5 @@
-<?php session_start(); ?>
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Quickbaluchon</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap-grid.css">
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap-reboot.css">
-	<link rel="stylesheet" type="text/css" href="../css/style.css">
-	<link rel="stylesheet" type="text/css" href="../css/main.css">
-</head>
-<body>
+		<header>
 
-	<div>
-		
-		<header >
-			
 			<nav class="navbar navbar-expand-lg navbar-light bg-light" >
 			  <div class="container-fluid hit">
 			    <div class="collapse navbar-collapse marge" id="navbarNav">
@@ -27,8 +9,12 @@
 			    <div class="collapse navbar-collapse" id="navbarNav" >
 			      <ul class="navbar-nav">
 
-			      	 <?php 
-				      	if ($_SESSION) { ?>
+			      	 <?php
+				      	if (!empty($_SESSION['idCustomer'])){
+									echo'
+									<li class="nav-item">
+										<a class="nav-link active decore" aria-current="page" href="../index.php">Accueil</a>
+									</li>
 
 				      		<li class="nav-item">
 					          <a class="nav-link decore" href="../pages/accueil.php">Mon Compte</a>
@@ -40,31 +26,49 @@
 
 					        <li class="nav-item">
 					          <a class="nav-link decore" href="../pages_php/deconnexion.php">Se Déconnecter</a>
-					        </li>
-					<?php }else{ ?>        
+					        </li>';
+					}else{
+						echo'
 			        <li class="nav-item">
-			          <a class="nav-link active decore" aria-current="page" href="../index.php">Home</a>
+			          <a class="nav-link active decore" aria-current="page" href="../index.php">Accueil</a>
 			        </li>
 
 			        <li class="nav-item">
-			          <a class="nav-link decore" href="../pages/link.php">S'inscrire</a>
+			          <a class="nav-link decore" href="../pages/link.php">S\'inscrire</a>
 			        </li>
 			        <li class="nav-item">
-			          <a class="nav-link decore" href="../pages/link1.php">Se Connecter</a>
-			        </li>
-			        <?php } ?>
-			        <!-- <li class="nav-item">
-			          <a class="nav-link" href="#"><img src="img/bi_globe.png" height="20px">Fr</a>
-			        </li> -->
+			          <a class="nav-link decore" href="../pages/connexion.php">Se Connecter</a>
+			        </li>';
+						}
+						?>
+
+						 <?php
+	             if(!empty($_SESSION['admin'])){
+								 if($_SESSION['admin'] == 1) {
+									 echo
+									 '<li class="nav-item dropdown">
+		                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		                   Administration
+		                 </a>
+		                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+		                   <a class="dropdown-item" href="userLivreur.php">Gestion des livreurs</a>
+											 <a class="dropdown-item" href="userClient.php">Gestion des clients</a>
+											 <a class="dropdown-item" href="#">Gestion des paiements</a>
+											 <a class="dropdown-item" href="#">Gestion des factures</a>
+		                 </div>
+		               </li>';
+		             }
+		           }
+							?>
+
 			        <li class="nav-item dropdown">
-					  <a class="nav-link dropdown-toggle decor" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="../img/bi_globe.png" height="20px">
-					    Fr
+					  <a class="nav-link dropdown-toggle decor" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../img/bi_globe.png" height="20px">
+					    FR
 					  </a>
-					  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-					    <li><a class="dropdown-item" href="#">anglais</a></li>
-					    <li><a class="dropdown-item" href="#">Espagnol</a></li>
-					    <li><a class="dropdown-item" href="#">chinois</a></li>
-					  </ul>
+					  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					    <a class="dropdown-item" href="../pages/accueilEng.php">EN</a>
+							<a class="dropdown-item" href="#">SPA</a>
+					  </div>
 					</li>
 			      </ul>
 			    </div>
@@ -72,4 +76,3 @@
 			</nav>
 
 		</header>
-	</div>	

@@ -1,0 +1,2 @@
+RewriteRule ^(en|es|de)/(.*)$ $2?lang=$1 [L,QSA]
+RewriteRule ^(.*)$ $1?lang=fr [L,QSA]

@@ -1,6 +1,10 @@
 <?php
+ini_set('display_errors', 'on');
+
+
         require('../config.php');
 
+        $bdd = connexionBDD();
         if(isset($_POST['sendFormRegister'])){
                 $lastName = htmlspecialchars($_POST['lastName']);
                 $firstName = htmlspecialchars($_POST['firstName']);
@@ -15,7 +19,7 @@
                         $mailexist = $verifemail->rowCount();
 
                         if ($mailexist == 0) {
-                            
+
                             // creer un utilisateur et le rajoute dans la base de donnée
                             $insertuser = $bdd->prepare('INSERT INTO customer(lastName, firstName, Email, password, excelfile) VALUES(?, ?, ?, ?, ?)');
                             $insertuser->execute(array($lastName, $firstName, $Email, $password, $excelfile));
@@ -25,6 +29,6 @@
                            header("Location: ../pages/inscription.php?error=$error");
                         }
                 }
-                
-        }        
+
+        }
 ?>

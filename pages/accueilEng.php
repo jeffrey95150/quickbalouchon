@@ -24,7 +24,7 @@ ini_set('display_errors', 'on');
 <?php
 	$bdd = connexionBDD();
 ?>
-<?php 	include '../composent/header.php'; ?>
+<?php 	include '../composent/headerEng.php'; ?>
 
 <main>
 		<div class="container-fluid position1">
@@ -34,9 +34,9 @@ ini_set('display_errors', 'on');
 
 		      	if ($_SESSION){
 							 ?>
-		      		<h3>Bienvenue sur votre compte</h3>
+		      		<h3>Welcome on your account</h3>
 		      		<div>
-	<h1 style="padding-top:130px; padding-left: 600px;">Vue de tous vos depos</h1>
+	<h1 style="padding-top:130px; padding-left: 600px;">Look at your package list</h1>
 </div>
 
 <?php
@@ -66,9 +66,9 @@ $results = $req->fetchAll(PDO::FETCH_ASSOC);
                         <p style="text-align: center"><?php echo $value['numéro']. ' '.  $value['rue'] . ', ' .  $value['ville'] . ' ' .$value['pays']  ?> </p>
 
                         <p>
-                        	<?php echo '<a style="margin-left: 75px;" href="../pagesClient/updateColi.php?id=' . $value['id'] . '" class="btn btn-primary">Modifier</a>'?>
-                        	<?php echo '<a style="margin-left: 75px;" href="../pagesClient/liste.php?id=' . $value['id'] . '" class="btn btn-link">Listes</a>'?>
-                        	<?php echo '<a style="margin-left: 75px;" href="../pagesClient/DeleteColi.php?id=' . $value['id'] . '" class="btn btn-danger">Supprimer</a>'?>
+                        	<?php echo '<a style="margin-left: 75px;" href="../pagesClient/updateColi.php?id=' . $value['id'] . '" class="btn btn-primary">Modify</a>'?>
+                        	<?php echo '<a style="margin-left: 75px;" href="../pagesClient/liste.php?id=' . $value['id'] . '" class="btn btn-link">List</a>'?>
+                        	<?php echo '<a style="margin-left: 75px;" href="../pagesClient/DeleteColi.php?id=' . $value['id'] . '" class="btn btn-danger">Delete</a>'?>
                         </p>
 
                     </div>
@@ -80,8 +80,8 @@ $results = $req->fetchAll(PDO::FETCH_ASSOC);
 		      	<?php }else{ ?>
 				<div class="col-12 position1 margindex">
 					<h2 class="this then"><u>SBJ Delivery</u></h2><br>
-					<h5 class="this">Déposes ton colis et il sera livré!!!</h5>
-					<button type="submit" class="design bord col-2" >Je decouvre</button>
+					<h5 class="this">Drop off your package and it'll be delivered ! <h5>
+					<button type="submit" class="design bord col-2" >Discover</button>
 				</div>
 
 				<div class="row margindex">
